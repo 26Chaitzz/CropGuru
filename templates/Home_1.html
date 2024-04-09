@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CropGuru</title>
+    <link
+      rel="stylesheet"
+      href="../static/myhome.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>CropGuru</h1>
+      <p style="color: black">
+        Welcome to CropGuru! We provide expert crop recommendations based on soil analysis and environmental factors. Our advanced algorithms analyze soil data to suggest the best crops for your conditions. Maximize productivity and boost your farm's success with CropGuru.
+      </p>
+      <br />
+      <h3 style="color: black">Let's Start New Journey With CropGuru</h3>
+      <br />
+      <h2 style="color: black">
+        Click below for Crop recommendation
+      </h2>
+    </main>
+    <form action="/Predict">
+      <input
+        type="submit"
+        id="Predict"
+        name="Predict"
+        action="/Predict"
+        value="Predict"
+      />
+    </form>
+  </body>
+</html>
