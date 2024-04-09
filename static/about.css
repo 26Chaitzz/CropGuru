@@ -1,0 +1,56 @@
+body {
+    background-image: url(about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  header {
+    background-color: rgb(36, 45, 57);
+    padding: 20px;
+    position: sticky;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+    transition: all 0.5s ease-out;
+    flex: 1;
+    text-align: center; 
+}
+
+  nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: solid; 
+  }
+
+  main {
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  p {
+    font-size: 20px;
+    color: azure;
+  }
+
+  h3 {
+    font-size: 20px;
+    color: white;
+  }
