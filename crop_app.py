@@ -37,19 +37,10 @@ def brain():
 def contact_page():
     return render_template('Contact.html')
 
+@app.route('/about')
+def about():
+    return render_template('About.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
