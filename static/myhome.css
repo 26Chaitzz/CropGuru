@@ -18,10 +18,12 @@ input[type="submit"] {
   }
 
   header {
-    background-color: #333;
-    color: white;
+    background-color: rgb(36, 45, 57);
     padding: 20px;
-  }
+    position: sticky;
+    border-radius: 10px;
+    box-sizing: border-box;
+  } 
 
   nav ul {
     list-style: none;
@@ -34,11 +36,15 @@ input[type="submit"] {
   nav li {
     display: inline-block;
     margin-right: 20px;
-  }
+    transition: all 0.5s ease-out;
+    flex: 1;
+    text-align: center; 
+}
 
   nav a {
     color: white;
-    text-decoration: none;
+    font-size: 20px;
+    text-decoration: solid; 
   }
 
   main {
@@ -47,7 +53,7 @@ input[type="submit"] {
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 60px;
     margin-bottom: 20px;
   }
 
