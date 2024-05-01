@@ -1,5 +1,6 @@
 import joblib
 from flask import Flask, render_template, request, redirect
+import mysql.connector
 app = Flask(__name__)
 
 @app.route('/')
@@ -40,6 +41,32 @@ def contact_page():
 @app.route('/about')
 def about():
     return render_template('About.html')
+
+@app.route('/submit_form', methods=['POST'])
+def submit_form():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        message = request.form['message']
+        
+        # Connect to MySQL database
+        conn = mysql.connector.connect(
+            host='localhost',
+            user='root',
+            password='12345',
+            database='Crop'
+        )
+        cursor = conn.cursor()
+        
+        # Insert data into database table
+        cursor.execute("INSERT INTO contact (name, email, message) VALUES (%s, %s, %s)", (name, email, message))
+        
+        # Commit changes and close connection
+        conn.commit()
+        conn.close()
+        
+        return 'Form submitted successfully!'
+
 
 if __name__ == '__main__':
     app.run(debug=True)
